@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <title>ADB Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/add_s_data.css">
+    <link rel="stylesheet" type="text/css" href="../static/fontawsome/css/all.css">
+</head>
+<body>
+<h1><a href="{{ url_for('index') }}">ADB Assignment 1</a></h1>
+<h1>Rohit Padwal</h1>
+<h1>1001833828</h1>
+<div>
+    <div class="container">
+        {% for dataElement in data %}
+
+        <p>Name: {{ dataElement.Name }}</p>
+        <p>State: {{ dataElement.State }}</p>
+        <p>Salary: {{ dataElement.Salary }}</p>
+        <p>Grade: {{ dataElement.Grade }}</p>
+        <p>Room: {{ dataElement.Room }}</p>
+        <p>telnum: {{ dataElement.Telnum }}</p>
+        <p>Picture: {{ dataElement.Picture }}</p>
+        <p>Keywords: {{ dataElement.Keywords }}</p>
+        <img src = {{dataElement.ImageURL}} alt="No_image_available" width='auto' height='200' style='margin: 0.5em 0;'/>
+        <hr style="width:90%">
+
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <title>ADB Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/add_s_data.css">
+    <link rel="stylesheet" type="text/css" href="../static/fontawsome/css/all.css">
+</head>
+
+
+<body>
+<h1><a href="{{ url_for('index') }}">ADB Assignment 1</a></h1>
+<h1>Rohit Padwal</h1>
+<h1>1001833828</h1>
+<div>
+    <form method="POST" action="/search">
+        <label>Search by Name</label>
+        <input type="text" name="username" id="username"><br/>
+        <input type="submit" name="Delete" value="Delete">
+        <label>Search by Salary</label>
+        <input type="text" name="salary" id="salary"><br/>
+        <input type="submit" name="Update Salary" value="Update">
+        <input type="submit" name="Submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
